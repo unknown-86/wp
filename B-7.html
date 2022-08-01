@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function positiveornegative(viruscomp, bloodcomp) {
+            var i = 0,
+                j = 0;
+            while (i < bloodcomp.length) {
+                if (j === viruscomp.length) {
+                    return false;
+                }
+                if (bloodcomp[i] === viruscomp[j]) {
+                    i++;
+                }
+                j++;
+            };
+            return true;
+        };
+
+        const viruscomp = prompt("Enter the virus composition:")
+        var num = prompt(" Enter the number of people");
+        var bloodcomp = [num];
+        for (var i = 0; i < num; i++) {
+            bloodcomp[i] = prompt("Enter the blood composition of person " + (i + 1));
+            var res = positiveornegative(viruscomp, bloodcomp[i]);
+            if (res == true) {
+                document.write("PERSON " + (i + 1) + " - POSITIVE<br/>");
+            } else {
+                document.write("PERSON " + (i + 1) + " - NEGATIVE<br/>");
+            }
+        }
+    </script>
+</body>
+</html>

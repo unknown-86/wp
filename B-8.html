@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+</head>
+<body>
+    <form>
+        <label>Enter the email in localpart@domain format</label>
+        <input type="text" id="ip">
+        <input type="submit" value="Submit" onclick="valEmail()">
+    </form>
+
+    <script>
+    function valEmail()
+    {
+        var str = document.getElementById("ip").value;
+        var mailformat=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(mailformat.test(str))
+        {
+            alert("Matches the pattern");
+        }
+        else
+        {
+            alert("Not matching");
+        }
+    }
+
+    // function see()
+    // {
+    //     var str = document.getElementById("ip").value;
+    //     valEmail(str);
+    // }
+    </script>
+</body>
+</html>

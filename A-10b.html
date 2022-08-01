@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverse(input)
+        {
+            var x = input.split(" ");
+            var rev = x.map(res => {
+                return res.split('').reverse().join("");
+            });
+            return rev.join(" ");
+        };
+
+        var input=prompt("Enter a string");
+        document.write(reverse(input));
+
+    </script>
+</body>
+</html>

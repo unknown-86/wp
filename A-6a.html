@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="func()">Reverse</button>
+    <script>
+        let func = () =>
+        {
+            let rev = (n) =>
+            {
+                n = n+ "";
+                return n.split("").reverse().join("");
+            }
+            let input = prompt("Enter the number");
+            document.write("Reverse of the entered number is "+Number(rev(input)));
+        }
+    </script>
+</body>
+</html>

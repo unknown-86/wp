@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="cap()"> Capitalize
+    <button onclick="sp()"> Split
+	</button>
+    <script>
+        function cap()
+        {
+            var input = prompt("Enter a string");
+            var words = input.split(' ');  
+            var Capital = [];  
+            words.forEach(input => {  
+            Capital.push(input[0].toUpperCase() + input.slice(1,input.length));});  
+            for(let i=0;i<=words.length-1;i++)
+            {
+                document.write(Capital[i]+" ");
+            }
+        }
+        
+        function sp()
+        {
+            var str = prompt("Enter the string");
+            const res = str.split(" ");
+            document.write(res);
+        }
+    </script>
+</body>
+</html>

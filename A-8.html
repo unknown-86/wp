@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="func()">Click to encrypt</button>
+    <script>
+        var func = () =>
+        {
+            let text = prompt("Enter the string");
+        
+            let s = parseInt(prompt("Enter the shift"));
+            let result =""
+            for(let i=0; i<text.length; i++)
+            {
+                let char=text[i];
+                if(char.toUpperCase() == text[i]) 
+                {
+                    let ch = String.fromCharCode((char.charCodeAt(0) + s -65)% 26 + 65);
+                    result += ch;
+                }
+                else
+                {
+                    let ch = String.fromCharCode((char.charCodeAt(0) + s - 97)% 26 + 97);
+                    result+=ch;
+                }
+                // return result;
+            }
+            document.write("Cipher text : "+result);
+        }
+    </script>
+</body>
+</html>

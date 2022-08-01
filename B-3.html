@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+    <script>
+        const test=(num1,num2)=>new Promise((resolve)=>
+        {
+            setTimeout(function()
+            {
+                resolve("Addition of 2 numbers: "+(num1+num2));
+            },4000);
+        });
+        const test1=(num1,num2)=>new Promise((resolve)=>
+        {
+            setTimeout(function()
+            {
+                resolve("Subtraction of 2 numbers: "+(num1-num2));
+            },4000);
+        });
+        const test2=(num1,num2)=>new Promise((resolve)=>
+        {
+            setTimeout(function()
+            {
+                resolve("Multiplication of 2 numbers: "+(num1*num2));
+            },4000);
+        });
+        const test3=(num1,num2)=>new Promise((resolve)=>
+        {
+            setTimeout(function()
+            {
+            resolve("Division of 2 numbers: "+(num1/num2));
+            },4000);
+        });
+
+        document.getElementById("btn").addEventListener("click",func)
+
+        function func()
+        {
+            let n1=parseInt(prompt("Enter the first number"));
+            let n2=parseInt(prompt("Enter the second number"));
+            getdata(n1,n2);
+        }
+           
+        async function getdata(n1,n2)
+        {
+            let data1=await test(n1,n2);
+            document.write(data1);
+            let data2=await test1(n1,n2);
+            document.write("<br>")
+            document.write(data2);
+            let data3=await test2(n1,n2);
+            document.write("<br>")
+            document.write(data3);
+            let data4=await test3(n1,n2);
+            document.write("<br>")
+            document.write(data4);
+        }
+        // getdata();
+    </script>
+</body>
+</html>
